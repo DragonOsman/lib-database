@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
 
-function UpdateBookInfo({ id }) {
+function UpdateBookInfo() {
   const [state, setState] = useState({
     title: "",
     isbn: "",
@@ -13,6 +13,7 @@ function UpdateBookInfo({ id }) {
     publisher: ""
   });
   const navigate = useNavigate();
+  const { id } = useParams();
 
   useEffect(() => {
     axios

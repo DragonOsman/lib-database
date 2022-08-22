@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 
-function ShowBookDetails({ id }) {
+function ShowBookDetails() {
   const [book, setBook] = useState({});
   const navigate = useNavigate();
+  const { id } = useParams();
 
   useEffect(() => {
     axios

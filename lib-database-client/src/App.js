@@ -13,15 +13,13 @@ import ShowBookDetails from "./components/ShowBookDetails";
 import UpdateBookInfo from "./components/UpdateBookInfo";
 
 function App() {
-  const { id } = useParams();
-
   return (
     <Router>
       <Routes>
         <Route path="/" element={<ShowBookList />} />
         <Route path="/create-book" element={<CreateBook />} />
-        <Route path="/edit-book/:id" element={<UpdateBookInfo id={id} />} />
-        <Route path="/show-book/:id" element={<ShowBookDetails id={id} />} />
+        <Route path="/edit-book/:id" element={<UpdateBookInfo />} />
+        <Route path="/show-book/:id" element={<ShowBookDetails />} />
       </Routes>
     </Router>
   );
