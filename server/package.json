@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "eslint": "^8.22.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "passport": "^0.6.0",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "app": "nodemon server.js"
+  },
+  "name": "lib-database-server",
+  "version": "1.0.0",
+  "description": "Server code for my library/book database app",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DragonOsman/lib-database.git"
+  },
+  "keywords": [
+    "library-database",
+    "database-app"
+  ],
+  "author": "Osman Zakir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DragonOsman/lib-database/issues"
+  },
+  "homepage": "https://github.com/DragonOsman/lib-database#readme"
+}
