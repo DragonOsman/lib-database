@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import './App.scss';
 
-function App() {
+import CreateBook from "./components/CreateBook";
+import ShowBookList from "./components/ShowBookList";
+import ShowBookDetails from "./components/ShowBookDetails";
+import UpdateBookInfo from "./components/UpdateBookInfo";
+
+function App():JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <img src="logo.png" alt="dragon logo" />
+        <h1>DragonOsman Library Database</h1>
       </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<ShowBookList />} />
+          <Route path="/create-book" element={<CreateBook />} />
+          <Route path="/edit-book/:id" element={<UpdateBookInfo />} />
+          <Route path="/show-book/:id" element={<ShowBookDetails />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
